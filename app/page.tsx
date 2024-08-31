@@ -43,7 +43,7 @@ export default function Home() {
         <div className="flex flex-col justify-between sm:h-full w-full">
           {
             sections.filter((section) => section.title === sectionParam).map(({ title, pro, date, bookmarked, description }, index) => (
-              <div className="flex flex-col gap-y-8">
+              <div key={'section-'+index} className="flex flex-col gap-y-8">
                 <h1 className="text-2xl font-medium flex items-center gap-x-4">{title} Section {pro && <span className="bg-gradient-to-b bg-clip-text text-transparent from-[#FF7A00] to-[#FF2900] text-lg">Pro</span>}</h1>
                 <p className="text-[#7E7F81]">{description}</p>
               </div>

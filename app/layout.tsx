@@ -26,18 +26,18 @@ export default function RootLayout({
       <body className={cn(inter.className, 'dark h-full w-full')}>
         <Toaster />
         <SectionsProvider>
+            <Suspense>
         <div className="flex flex-col h-full w-full overflow-hidden">
           <Navbar></Navbar>
           <Separator></Separator>
           <div className="flex h-full overflow-hidden">
-            <Suspense>
               <VerticalNavbar></VerticalNavbar>
-            </Suspense>
             <div className="flex-1">
               {children}
             </div>
           </div>
         </div>
+            </Suspense>
         </SectionsProvider>
       </body>
     </html>
