@@ -28,7 +28,7 @@ const plans = [
     'Pro',
 ]
 
-const defaultAccordionValue = ['platforms', 'sections']
+const defaultAccordionValue = ['platform', 'sections','saved']
 export default function VerticalNavbar() {
     const searchParams = useSearchParams()
     const currentPlatform = searchParams.get('platform') ?? 'Figma'
