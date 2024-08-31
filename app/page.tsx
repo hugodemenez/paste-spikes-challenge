@@ -68,8 +68,9 @@ export default function Home() {
           <Button variant={'outline'} className="hidden sm:flex items-center justify-center gap-x-2 bg-[#1B1B1B] border border-[#292929] rounded-[6px] text-[#7E7F81]">Browse All</Button>
         </div>
         <div className="grid sm:grid-cols-3 w-full gap-x-6 gap-y-[40px]">
-          {sections.filter((section)=>section.title!=sectionParam).map(({ title, pro, date, bookmarked }, index) => (
-            <div className="w-full flex flex-col gap-y-4" key={index}>
+          {sections.map(({ title, pro, date, bookmarked }, index) => (
+            title !== sectionParam &&
+              <div className="w-full flex flex-col gap-y-4" key={index}>
               <Link href={pathname + '?' + createQueryString('section', title)}>
               <Card className="h-[217px] flex items-center justify-between gap-x-4 bg-[#1B1B1B] border border-[#292929] rounded-[12px] hover:bg-[#343434]">
               </Card>
