@@ -21,7 +21,7 @@ import Link from "next/link";
 export default function Home() {
 
   const searchParams = useSearchParams();
-  const sectionParam = searchParams.get('section');
+  const sectionParam = searchParams.get('section')??'Hero';
   const { sections, toggleBookmark } = useSections();
 
   const pathname = usePathname()
