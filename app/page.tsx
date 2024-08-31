@@ -65,7 +65,7 @@ export default function Home() {
       <div className="flex flex-col gap-y-[40px]">
         <div className="flex w-full justify-between">
           <h2 className="text-2xl font-medium">Other sections you might like</h2>
-          <Button variant={'outline'} className="flex items-center justify-center gap-x-2 bg-[#1B1B1B] border border-[#292929] rounded-[6px] text-[#7E7F81]">Browse All</Button>
+          <Button variant={'outline'} className="hidden sm:flex items-center justify-center gap-x-2 bg-[#1B1B1B] border border-[#292929] rounded-[6px] text-[#7E7F81]">Browse All</Button>
         </div>
         <div className="grid sm:grid-cols-3 w-full gap-x-6 gap-y-[40px]">
           {sections.filter((section)=>section.title!=sectionParam).map(({ title, pro, date, bookmarked }, index) => (

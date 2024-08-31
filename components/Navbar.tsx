@@ -25,15 +25,15 @@ export default function Navbar(){
             <Link href='/' className="flex-shrink-0 hidden sm:block">
             <Image src={"/logo.png"} alt={""} height={32} width={97}></Image>
             </Link>
-            <Separator orientation="vertical" />
+            <Separator orientation="vertical" className="hidden sm:block" />
             <ul className="hidden lg:flex items-center gap-8">
                 {links.map(({href, label}) => (
                     <li key={href} className={cn("",pathname === href?'text-white':'text-muted-foreground hover:text-gray-300')}><Link href={href}>{label}</Link></li>
                 ))}
             </ul>
-            <Separator orientation="vertical" />
+            <Separator orientation="vertical" className="hidden sm:block"/>
             <Searchbar></Searchbar>
-            <Separator orientation="vertical" />
+            <Separator orientation="vertical" className="hidden sm:block" />
             <Userprofile></Userprofile>
         </nav>
     )
